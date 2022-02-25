@@ -1,12 +1,12 @@
 const generateNumbersRange = (from, to) => {
   const result = [];
-  for (let i = from; i < to; i++) {
+  for (let i = from; i <= to; i++) {
     result.push(i);
   }
   return result;
 };
 const getLineSeats = () => {
-  generateNumbersRange(1, 3)
+  generateNumbersRange(1, 10)
     .map(
       (seatNumber) =>
         `<div class="sector__seat" data-seat-number="${seatNumber}">
@@ -16,7 +16,7 @@ const getLineSeats = () => {
 };
 const getSectorLines = () => {
   const seatsString = getLineSeats();
-  return generateNumbersRange(1, 3)
+  return generateNumbersRange(1, 10)
     .map(
       (lineNumber) =>
         `<div class="sector__line" data-line-number="${lineNumber}">
